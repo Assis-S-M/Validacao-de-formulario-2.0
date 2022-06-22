@@ -8,13 +8,17 @@
  }
 
  a.textLink{
-    color: black;
+    color: white;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
     margin: 20px;
 }
- 
+
+body {
+    background-color: rgb(12, 77, 255);
+}
+
  input[type=number] {
      -moz-appearance:textfield;
  }
@@ -37,10 +41,12 @@
 }
 
 #mainSite {
+    color: white;
     display: flex;
     margin-left: 10%;
-    background-color: rgb(171, 171, 171);
-    border: 10px outset grey;
+    background-color: rgb(6, 155, 255);
+    border: 10px outset rgb(10, 200, 247);
+    border-radius: 10px;
     width: 75%;
     height: 75%;
     position: absolute;
@@ -53,11 +59,14 @@
 #fieldsetMain {
     width: 500px;
     display: flex;
-    /* margin-left: 30%; */
     justify-content: space-evenly;
     flex-direction: row;
     position: relative;
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(103, 227, 255);
+}
+
+div#divGLobal {
+    display: flex;
 }
 
 form {
@@ -69,12 +78,19 @@ form {
 }
 
 fieldset {
+    color: white;
+    display: flex;
+    height: 50%;
+    width: 50%;
     border-style: outset;
     padding: 12px;
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(6, 155, 255);
     border-radius: 10px;
     opacity: 0%;
     animation: fadeIn 0.5s ease-in-out forwards, borderEffect 1s linear infinite alternate-reverse;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 legend {
@@ -114,7 +130,6 @@ img {
 }
 
 img:hover {
-    width: 160x;
     height: 160px;
     border-radius: 15px;
     border: 3px inset rgb(162, 161, 161);
