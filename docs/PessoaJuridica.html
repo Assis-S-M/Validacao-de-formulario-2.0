@@ -16,6 +16,7 @@
             <fieldset>
                 <legend>Dados da empresa</legend>
 
+                <div id="divGlobal">
                 <div>
                     <label>Nome: <input type="text" placeholder="Digite seu nome" id="nome" name="nome"></label>
                 </div>
@@ -28,10 +29,14 @@
                     <label>CNPJ: <input type="text" placeholder="Digite o CNPJ" id="cnpj" name="cnpj" onkeypress="$(this).mask('00.000.000/0001-00')"></label>
                     <label>Inscrição Estadual: <input type="text" placeholder="Inscrição Estadual" id="inscEstadual" name="inscEstadual"></label>
                 </div>
+
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Endereço</legend>
+
+                <div id="divGlobal">
                 <div>
                     <label>CEP: <input type="text" placeholder="Digite o cep" id="cep" name="cep" onkeypress="$(this).mask('000-00000')"></label>                    
                 </div>
@@ -60,11 +65,14 @@
                         </select>
                     </label>
                 </div>
+
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Autenticação</legend>
 
+                <div id="divGlobal">
                 <div>
                     <label>Nome 1: <input type="text" id="nome1" name="nome1"></label>
                     <label>Telefone <input type="text" id="tel1" name="tel1"></label>
@@ -83,6 +91,8 @@
                 <div>
                     <label>Email 2: <input type="text" id="email2" name="email2"></label>
                     <label>Ramal: <input type="text" id="ramal2" name="ramal2"></label>
+                </div>
+                
                 </div>
             </fieldset>
             <input type="submit" value="Cadastrar pessoa juridica">

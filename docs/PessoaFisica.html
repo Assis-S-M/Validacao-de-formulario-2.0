@@ -15,6 +15,8 @@
         <form method="get" action="" class="formPessoaFisica" id="formPessoaFisica">
             <fieldset>
                 <legend>Dados pessoais</legend>
+    
+                <div id="divGlobal">
 
                 <div>
                     <label for="cpf">CPF: </label>
@@ -33,10 +35,14 @@
                     <label for="idade">Idade: </label>
                     <input type="number" name="idade" id="idade" onkeypress="$(this).mask('000')" min="1" max="130">
                 </div>
+
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Endereço</legend>
+
+                <div id="divGlobal">
 
                 <div>
                     <label for="cep">CEP: </label>
@@ -74,11 +80,14 @@
                         <option>ES</option>
                     </select>
                 </div>
+
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Contato</legend>
 
+                <div id="divGlobal">
                 <div>
                     <label for="telFix">Telefone fixo: </label>
                     <input type="text" name="telFix" id="telFix" placeholder="Digite o telefone fixo" onkeypress="$(this).mask('0000-0000')">
@@ -86,11 +95,14 @@
                     <label for="telCel">Celular: </label>
                     <input type="text" name="telCel" id="telCel" placeholder="Digite o telefone celular" onkeypress="$(this).mask('00000-0000')">
                 </div>
+
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Autenticação</legend>
 
+                <div id="divGlobal">
                 <div>
                     <label for="email">Email: </label>
                     <input type="text" name="email" id="email" placeholder="Digite o Email">
@@ -109,6 +121,8 @@
                 <div>
                     <label for="confSenha">Confirmação de senha: </label>
                     <input type="password" name="confSenha" id="confSenha" placeholder="Confirme a senha" min="8">
+                </div>
+
                 </div>
             </fieldset>
 
