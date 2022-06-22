@@ -1,0 +1,160 @@
+.error{border-color: red;}
+ .ok{border-color: green;}
+
+ input[type=number]::-webkit-outer-spin-button,
+ input[type=number]::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+
+ a.textLink{
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 20px;
+}
+ 
+ input[type=number] {
+     -moz-appearance:textfield;
+ }
+
+.radioFieldset {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.radioOptions {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#legendTitle {
+    font-size: 40px;
+}
+
+#mainSite {
+    display: flex;
+    margin-left: 10%;
+    background-color: rgb(171, 171, 171);
+    border: 10px outset grey;
+    width: 75%;
+    height: 75%;
+    position: absolute;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#fieldsetMain {
+    width: 500px;
+    display: flex;
+    /* margin-left: 30%; */
+    justify-content: space-evenly;
+    flex-direction: row;
+    position: relative;
+    background-color: rgb(197, 197, 197);
+}
+
+form {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana;
+}
+
+fieldset {
+    border-style: outset;
+    padding: 12px;
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    opacity: 0%;
+    animation: fadeIn 0.5s ease-in-out forwards, borderEffect 1s linear infinite alternate-reverse;
+}
+
+legend {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+select {
+    border-radius: 5px;
+}
+
+label {
+    padding: 5px;
+}
+
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 14%;
+}
+
+img {
+    width: 140x;
+    height: 140px;
+    border-radius: 15px;
+    display: block;
+    border: 3px outset rgb(162, 161, 161);
+    transition: all 0.3s;
+}
+
+img:hover {
+    width: 160x;
+    height: 160px;
+    border-radius: 15px;
+    border: 3px inset rgb(162, 161, 161);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+h1 {
+    position: relative;
+    top: -30%;
+}
+
+footer {
+    text-align: center;
+}
+
+p {
+    position: relative;
+    bottom: -30%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes borderEffect {
+    0% {
+        opacity: 100%;
+        border-color: white;
+    }
+    100% {
+        opacity: 100%;
+        border-color: black;
+    }
+}
+
