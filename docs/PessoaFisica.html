@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script defer src="js/jQuery-Mask-Plugin-master/dist/jquery.mask.js"></script>
+        <script src="js/jquery-validate/lib/jquery-3.1.1.js"></script>
+        <script src="js/jquery-validate/dist/jquery.validate.js"></script>
+        <script src="js/jquery-validate/src/additional/cpfBR.js"></script>
+        <script src="js/jquery-validate/src/additional/postalcodeBR.js"></script>
+        <script src="js/jquery-validate/dist/localization/messages_pt_BR.js"></script>
+        <script src="js/validate.js"></script>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css" />
+    </head>
+    <body>
+        <form method="get" action="" class="formPessoaFisica" id="formPessoaFisica">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+
+                <div>
+                    <label for="cpf">CPF: </label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" onkeypress="$(this).mask('000-000-000-00')">
+                </div>
+
+                <div>
+                    <label for="nome">Nome completo: </label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+                </div>
+
+                <div>
+                    <label for="dataNascimento">Data de nascimento: </label>
+                    <input type="date" name="dataNascimento" id="dataNascimento">
+
+                    <label for="idade">Idade: </label>
+                    <input type="number" name="idade" id="idade" onkeypress="$(this).mask('000')" min="1" max="130">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+
+                <div>
+                    <label for="cep">CEP: </label>
+                    <input type="text" name="cep" id="cep" placeholder="Digite seu CEP" onkeypress="$(this).mask('000-00000')">
+                </div>
+
+                <div>
+                    <label for="rua">Rua / Avenida</label>
+                    <input type="text" name="rua" id="rua" placeholder="Rua / Avenida">
+
+                    <label for="numRes">Número: </label>
+                    <input type="number" name="numRes" id="numRes" min="1" max="999">
+                </div>
+
+                <div>
+                    <label for="bairro">Bairro: </label>
+                    <input type="text" name="bairro" id="bairro" placeholder="Digite o bairro">
+                </div>
+
+                <div>
+                    <label for="comp">Complemento: </label>
+                    <input type="text" name="comp" id="comp" placeholder="Digite o complemento">
+                </div>
+
+                <div>
+                    <label for="municipio">Municipio: </label>
+                    <input type="text" name="municipio" id="municipio" placeholder="Digite o municipio">
+
+                    <label for="uf">UF: </label>
+                    <select id="uf">
+                        <option selected>CE</option>
+                        <option>SP</option>
+                        <option>BH</option>
+                        <option>MG</option>
+                        <option>ES</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contato</legend>
+
+                <div>
+                    <label for="telFix">Telefone fixo: </label>
+                    <input type="text" name="telFix" id="telFix" placeholder="Digite o telefone fixo" onkeypress="$(this).mask('0000-0000')">
+
+                    <label for="telCel">Celular: </label>
+                    <input type="text" name="telCel" id="telCel" placeholder="Digite o telefone celular" onkeypress="$(this).mask('00000-0000')">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Autenticação</legend>
+
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" id="email" placeholder="Digite o Email">
+                </div>
+
+                <div>
+                    <label for="confEmail">Confirmação de email: </label>
+                    <input type="text" name="confEmail" id="confEmail" placeholder="Confirme o email">
+                </div>
+
+                <div>
+                    <label for="senha">Senha: </label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite a senha" min="8">
+                </div>
+
+                <div>
+                    <label for="confSenha">Confirmação de senha: </label>
+                    <input type="password" name="confSenha" id="confSenha" placeholder="Confirme a senha" min="8">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Interesses</legend>
+
+                <div>
+                <div class="radioFieldset"> 
+                    <fieldset class="radioOptions">
+                        Esportes:
+                        <label for="natacao"><input type="checkbox" id="natacao" name="natacao">Natação</label>
+                        <label for="ginastica"><input type="checkbox" id="ginastica" name="ginastica">Ginastica</label>
+                        <label for="futebol"><input type="checkbox" id="futebol" name="futebol">Futebol</label>
+                        <label for="corrida"><input type="checkbox" id="corrida" name="corrida">Corrida</label>
+                        <label for="basquete"><input type="checkbox" id="basquete" name="basquete">Basquete</label>
+                        <label for="judo"><input type="checkbox" id="judo" name="judo">Judô</label>
+                        <label for="boxe"><input type="checkbox" id="boxe" name="boxe">Boxe</label>
+                        <label for="tennis"><input type="checkbox" id="tennis" name="tennis">Tennis</label>
+                        <label for="atletismo"><input type="checkbox" id="atletismo" name="atletismo">Atletismo</label>
+                    </fieldset>
+
+                    <fieldset class="radioOptions">
+                        O que você deseja aprender? 
+                        <label for="html"><input type="checkbox" id="html" name="html">HTML</label>
+                        <label for="css"><input type="checkbox" id="css" name="css">CSS</label>
+                        <label for="javascript"><input type="checkbox" id="javascript" name="javascript">JavaScript</label>
+                        <label for="php"><input type="checkbox" id="php" name="php">PHP</label>
+                        <label for="sql"><input type="checkbox" id="sql" name="sql">SQL</label>
+                        <label for="python"><input type="checkbox" id="python" name="python">Python</label>
+                        <label for="java"><input type="checkbox" id="java" name="java">Java</label>
+                        <label for="delphi"><input type="checkbox" id="delphi" name="delphi">Delphi</label>
+                        <label for="uml"><input type="checkbox" id="uml" name="uml">UML</label>
+                    </fieldset>
+
+                    <fieldset class="radioOptions">
+                        Como tomou ciência do curso de informática?  
+                        <label for="checkbox"><input type="checkbox" id="checkbox" name="checkbox">Radio</label>
+                        <label for="jornal"><input type="checkbox" id="jornal" name="jornal">Jornal</label>
+                        <label for="tv"><input type="checkbox" id="tv" name="tv">TV</label>
+                        <label for="E-mail"><input type="checkbox" id="E-mail" name="E-mail">E-mail</label>
+                        <label for="indicAluno"><input type="checkbox" id="indicAluno" name="indicAluno">Indicação de aluno</label>
+                        <label for="indicProf"><input type="checkbox" id="indicProf" name="indicProf">Indicação do professor</label>
+                        <label for="google"><input type="checkbox" id="google" name="google">Google</label>
+                        <label for="facebook"><input type="checkbox" id="facebook" name="facebook">Facebook</label>
+                        <label for="OutrosRedes"><input type="checkbox" id="OutrosRedes" name="OutrosRedes">Outras redes sociais</label>
+                        <label for="outdoor"><input type="checkbox" id="outdoor" name="outdoor">Outdoor</label>
+                        <label for="outros">Outros<input type="text" id="outros" name="outros"></label>
+                    </fieldset>
+                </div>
+                </div>
+            </fieldset>
+
+            <input type="submit" id="enviar" value="Cadastrar pessoa fisica">
+        </form>
+    </body>
+</html>

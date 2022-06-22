@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script defer src="js/jQuery-Mask-Plugin-master/dist/jquery.mask.js"></script>
+        <script src="js/jquery-validate/lib/jquery-3.1.1.js"></script>
+        <script src="js/jquery-validate/dist/jquery.validate.js"></script>
+        <script src="js/jquery-validate/src/additional/cpfBR.js"></script>
+        <script src="js/jquery-validate/src/additional/postalcodeBR.js"></script>
+        <script src="js/jquery-validate/dist/localization/messages_pt_BR.js"></script>
+        <script src="js/validateJuridico.js"></script>
+        <script src="js/jquery-validate/src/additional/cnpjBR.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css"> 
+    </head>
+    <body>
+        <form method="get" action="" id="formPessoaJuridica" class="formPessoaJuridica">
+            <fieldset>
+                <legend>Dados da empresa</legend>
+
+                <div>
+                    <label>Nome: <input type="text" placeholder="Digite seu nome" id="nome" name="nome"></label>
+                </div>
+
+                <div>
+                    <label>Razão social: <input type="text" placeholder="Digite sua razão social" id="razaoSocial" name="razaoSocial"></label>
+                </div>
+
+                <div>
+                    <label>CNPJ: <input type="text" placeholder="Digite o CNPJ" id="cnpj" name="cnpj" onkeypress="$(this).mask('00.000.000/0001-00')"></label>
+                    <label>Inscrição Estadual: <input type="text" placeholder="Inscrição Estadual" id="inscEstadual" name="inscEstadual"></label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+                <div>
+                    <label>CEP: <input type="text" placeholder="Digite o cep" id="cep" name="cep" onkeypress="$(this).mask('000-00000')"></label>                    
+                </div>
+
+                <div>
+                    <label>Rua / Avenida: <input type="text" id="rua" name="rua" placeholder="Digite a rua"></label>
+                </div>
+
+                <div>
+                    <label>Bairro: <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro"></label>
+                </div>
+
+                <div>
+                    <label>Complemento: <input type="text" id="comp" name="comp" placeholder="Digite o complemento"></label>
+                </div>
+
+                <div>
+                    <label>Municipio: <input type="text" id="municipio" name="municipio" placeholder="Digite o municipio"></label>
+                    <label>UF: 
+                        <select>
+                            <option selected>CE</option>
+                            <option>SP</option>
+                            <option>BH</option>
+                            <option>MG</option>
+                            <option>ES</option>
+                        </select>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Autenticação</legend>
+
+                <div>
+                    <label>Nome 1: <input type="text" id="nome1" name="nome1"></label>
+                    <label>Telefone <input type="text" id="tel1" name="tel1"></label>
+                </div>
+
+                <div>
+                    <label>Email 1: <input type="text" id="email1" name="email1"></label>
+                    <label>Ramal: <input type="text" id="ramal1" name="ramal1"></label>
+                </div>
+
+                <div>
+                    <label>Nome 2: <input type="text" id="nome2" name="nome2"></label>
+                    <label>Telefone <input type="text" id="tel2" name="tel2"></label>
+                </div>
+
+                <div>
+                    <label>Email 2: <input type="text" id="email2" name="email2"></label>
+                    <label>Ramal: <input type="text" id="ramal2" name="ramal2"></label>
+                </div>
+            </fieldset>
+            <input type="submit" value="Cadastrar pessoa juridica">
+        </form>
+    </body>
+</html>
