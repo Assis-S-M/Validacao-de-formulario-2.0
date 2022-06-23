@@ -7,7 +7,7 @@
         <script src="js/jquery-validate/src/additional/cpfBR.js"></script>
         <script src="js/jquery-validate/src/additional/postalcodeBR.js"></script>
         <script src="js/jquery-validate/dist/localization/messages_pt_BR.js"></script>
-        <script src="js/validate.js"></script>
+        <script defer src="js/validate.js"></script>
 
         <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css" />
     </head>
@@ -30,10 +30,10 @@
 
                 <div>
                     <label for="dataNascimento">Data de nascimento: </label>
-                    <input type="date" name="dataNascimento" id="dataNascimento">
+                    <input type="text" name="dataNascimento" id="dataNascimento" onkeypress="$(this).mask('00/00/0000')" size="5">
 
                     <label for="idade">Idade: </label>
-                    <input type="number" name="idade" id="idade" onkeypress="$(this).mask('000')" min="1" max="130">
+                    <span name="idade" id="idade"></span>
                 </div>
 
                 </div>
@@ -46,7 +46,7 @@
 
                 <div>
                     <label for="cep">CEP: </label>
-                    <input type="text" name="cep" id="cep" placeholder="Digite seu CEP" onkeypress="$(this).mask('000-00000')">
+                    <input type="text" name="cep" id="cep" placeholder="Digite seu CEP" onkeypress="$(this).mask('00000-000')">
                 </div>
 
                 <div>
@@ -115,12 +115,12 @@
 
                 <div>
                     <label for="senha">Senha: </label>
-                    <input type="password" name="senha" id="senha" placeholder="Digite a senha" min="8">
+                    <input type="password" name="senha" id="senha" placeholder="Digite a senha">
                 </div>
 
                 <div>
                     <label for="confSenha">Confirmação de senha: </label>
-                    <input type="password" name="confSenha" id="confSenha" placeholder="Confirme a senha" min="8">
+                    <input type="password" name="confSenha" id="confSenha" placeholder="Confirme a senha">
                 </div>
 
                 </div>
