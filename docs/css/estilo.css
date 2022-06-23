@@ -151,6 +151,26 @@ p {
     bottom: -30%;
 }
 
+#enviar, #resetar  {
+    cursor: pointer;
+}
+
+/* label.error {
+    font-size: 12px;
+    border: 1px solid red;
+    border-radius: 10px;
+} */
+
+img#imagemAlerta {
+    position: relative;
+    top: 12px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    display: inline;
+    cursor: auto;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0%;
