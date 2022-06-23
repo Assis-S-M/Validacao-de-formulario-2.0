@@ -164,12 +164,9 @@ p {
 
 @keyframes borderEffect {
     0% {
-        opacity: 100%;
         border-color: white;
     }
     100% {
-        opacity: 100%;
         border-color: black;
     }
 }
-
