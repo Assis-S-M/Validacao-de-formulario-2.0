@@ -1,3 +1,4 @@
+//Regras de validação do formulario
 $(document).ready(function () {
     $("#formPessoaFisica").validate({
         rules: {
@@ -78,18 +79,27 @@ const dataInput = document.querySelector('#dataNascimento');
 const spanData = document.querySelector('#idade');
 
 dataInput.addEventListener("input", () => {
-    let dataCalc = dataInput.value;
+    let dataCompleta = dataInput.value;
 
-    const diaNascimento = dataCalc.substring(0, 2);
-    const mesNascimento = dataCalc.substring(3, 5);
-    const anoNascimento = dataCalc.substring(6);
+    const diaNascimento = dataCompleta.substring(0, 2);
+    const mesNascimento = dataCompleta.substring(3, 5);
+    const anoNascimento = dataCompleta.substring(6);
 
-    // console.log("Dia: " + diaNascimento + "\nMes: " + mesNascimento + "\nAno:" + anoNascimento);
+    let resultadoDia = diaAtual - diaNascimento;
+    let resultadoMes = mesAtual - mesNascimento;
+    let resultadoAno = anoAtual - anoNascimento;
 
-    const resultadoDia = diaAtual - diaNascimento;
-    const resultadoMes = mesAtual - mesNascimento;
-    const resultadoAno = anoAtual - anoNascimento;
-    
+    if (resultadoDia < 0) {
+        resultadoDia += 30;
+        resultadoMes--;
+    }
+
+    if (resultadoMes < 0) {
+        resultadoMes += 12;
+        resultadoAno--;
+    } 
+
+    console.log(resultadoAno);
     const idade = `Você tem ${resultadoDia} dias, ${resultadoMes} meses e ${resultadoAno} anos de idade`;
     spanData.innerText = idade;
 })
