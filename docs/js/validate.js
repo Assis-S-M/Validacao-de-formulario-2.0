@@ -19,7 +19,7 @@ $(document).ready(function () {
             },
             dataNascimento: {
                 required: true,
-                date: true,
+                date: true
             },
             cep: {
                 required: true,
@@ -67,4 +67,29 @@ $(document).ready(function () {
             }
         }
     })
+})
+
+const data = new Date();
+const diaAtual = data.getDate();
+const mesAtual = (data.getMonth() + 1);
+const anoAtual = data.getFullYear();
+
+const dataInput = document.querySelector('#dataNascimento');
+const spanData = document.querySelector('#idade');
+
+dataInput.addEventListener("input", () => {
+    let dataCalc = dataInput.value;
+
+    const diaNascimento = dataCalc.substring(0, 2);
+    const mesNascimento = dataCalc.substring(3, 5);
+    const anoNascimento = dataCalc.substring(6);
+
+    // console.log("Dia: " + diaNascimento + "\nMes: " + mesNascimento + "\nAno:" + anoNascimento);
+
+    const resultadoDia = diaAtual - diaNascimento;
+    const resultadoMes = mesAtual - mesNascimento;
+    const resultadoAno = anoAtual - anoNascimento;
+    
+    const idade = `Você tem ${resultadoDia} dias, ${resultadoMes} meses e ${resultadoAno} anos de idade`;
+    spanData.innerText = idade;
 })
